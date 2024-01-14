@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Sidebar from './components/Sidebar'
+import Sidebar from './components/layout/Sidebar'
 import FollowBar from './components/FollowBar'
+import LoginModal from './components/modals/LoginModal'
 // import Modal from './components/Modal'
 
 
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* <Modal actionLabel='Submit' isOpen title='Test Modal' /> */}
+        <LoginModal />
         <div className='h-screen bg-black'>
           <div className='container h-full mx-auto xl:px-30 max-w-6xl'>
             <div className='grid grid-cols-4 h-full'>
