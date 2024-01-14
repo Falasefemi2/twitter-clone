@@ -8,24 +8,22 @@ import Button from "./Button";
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, footer, actionLabel, disabled }) => {
 
-    const handleClose = () => useCallback(() => {
+    const handleClose = useCallback(() => {
         if (disabled) {
             return;
         }
         onClose();
+    }, [disabled, onClose]);
 
-    }, [disabled, onClose])
-
-    const handleSubmit = () => useCallback(() => {
+    const handleSubmit = useCallback(() => {
         if (disabled) {
             return;
         }
-
-        onSubmit()
-    }, [disabled, onSubmit])
+        onSubmit();
+    }, [disabled, onSubmit]);
 
     if (!isOpen) {
-        return null
+        return null;
     }
 
     return (
