@@ -40,3 +40,9 @@ export interface InputProps {
     disabled?: boolean;
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
+export interface LoginModalStore {
+    isOpen: boolean;
+    onOpen: () => void;
+    onClose: () => void;
+} 

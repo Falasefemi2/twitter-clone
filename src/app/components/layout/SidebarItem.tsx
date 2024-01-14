@@ -1,4 +1,4 @@
-import { SidebarItemProps } from "../types/types"
+import { SidebarItemProps } from "../../types/types"
 
 
 const SidebarItem: React.FC<SidebarItemProps> = ({label,href,icon:Icon,onClick}) => {
