@@ -4,7 +4,8 @@ import './globals.css'
 import Sidebar from './components/layout/Sidebar'
 import FollowBar from './components/FollowBar'
 import LoginModal from './components/modals/LoginModal'
-// import Modal from './components/Modal'
+import RegisterModal from './components/modals/RegisterModal'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <Modal actionLabel='Submit' isOpen title='Test Modal' /> */}
+        <RegisterModal />
         <LoginModal />
         <div className='h-screen bg-black'>
           <div className='container h-full mx-auto xl:px-30 max-w-6xl'>

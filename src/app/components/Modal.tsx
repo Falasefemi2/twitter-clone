@@ -46,6 +46,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, f
                         {/* Footer */}
                         <div className="flex flex-col gap-2 p-10">
                             <Button disabled={disabled} label={actionLabel} secondary fullWidth large onClick={handleSubmit} />
+                            {footer}
                         </div>
                     </div>
                 </div>

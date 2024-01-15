@@ -46,3 +46,9 @@ export interface LoginModalStore {
     onOpen: () => void;
     onClose: () => void;
 } 
+
+export interface RegisterModalStore {
+    isOpen: boolean;
+    onOpen: () => void;
+    onClose: () => void;
+} 
