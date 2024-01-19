@@ -6,6 +6,10 @@ import FollowBar from './components/FollowBar'
 import LoginModal from './components/modals/LoginModal'
 import RegisterModal from './components/modals/RegisterModal'
 
+import {Toaster} from 'react-hot-toast'
+import { Providers } from './provider'
+
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,6 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Providers>
+          <Toaster />
         <RegisterModal />
         <LoginModal />
         <div className='h-screen bg-black'>
@@ -36,6 +42,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+        </Providers>
 
       </body>
     </html>
